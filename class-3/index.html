@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS : v-2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        .one{ 
+            color: red;
+        }
+        .two{ 
+            background-color: yellow;
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+            margin: 30px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <a v-bind:href="address" target="_blank">Facebook</a>
+      <h1 v-bind:class="clasess">Amrito Bosu</h1>
+      <input type="text" v-bind:value="name">
+    </div>
+
+    <!-- ================================== -->
+    <!-- Scripts -->
+    <!-- ================================== -->
+
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          name: "Amrito Bosu",
+          address: 'https://www.facebook.com/',
+          clasess: ['one','two']
+        },
+      });
+    </script>
+  </body>
+</html>

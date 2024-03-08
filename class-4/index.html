@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS : v-2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>I earn ${{ dollar }} per day.</h1>
+
+      <button @dblclick="Amount(+4)">+1</button>
+      <button @dblclick="Amount(-4)">-1</button>
+<br><hr><br>
+      <button @click="dollar++">+1</button>
+      <button v-on:click="dollar--">-1</button>
+    </div>
+
+    <!-- ================================== -->
+    <!-- Scripts -->
+    <!-- ================================== -->
+
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          dollar: 20
+        },
+        methods: {
+          Amount(taka){ 
+            this.dollar += taka
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS : v-2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+     <p>Looping</p>
+     <ol>
+        <li v-for="name in names">{{ name }}</li>
+     </ol>
+     <br>
+     <h3>All Fruits</h3>
+     <ul>
+        <li v-for="(fruit, index) in fruits">
+           {{ index }} => {{ fruit.name }} || {{ fruit.color }} || {{ fruit.weight }}
+        </li>
+     </ul>
+    </div>
+
+    <!-- ================================== -->
+    <!-- Scripts -->
+    <!-- ================================== -->
+
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+            names: ['amrito','rakib','sakib','sajib','kamal','jamal'],
+            fruits: [
+                {name: 'fgdf', color: 'red', weight: '12'},
+                {name: 'uytr', color: 'greed', weight: '54'},
+                {name: 'etyt', color: 'yello', weight: '76'},
+                {name: 'kjlk', color: 'light', weight: '45'},
+                {name: 'tryt', color: 'gray', weight: '34'},
+                {name: 'dfdg', color: 'white', weight: '32'},
+            ]
+        },
+        methods: {
+
+        },
+      });
+    </script>
+  </body>
+</html>
